@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Version 1.0
+    Esta pagina muestra un Curriculum tomando datos de randomuser.api 
+    cada vez que se Recarga la pagina toma nuevos dados
+    tambien hace uso de geolocalizacion solo la primera vez y guarda coodenadas-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <!--Tipografia Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--Favicom -->
+    <link rel="icon" type="image/x-icon" href="cascada.png">
+
+    <!--Open Grahp Data -->
+    <!--La etiqueta “Title” está encargada de señalarle a los buscadores el propósito del sitio. 
+    Para que funcione correctamente debe ser muy clara y precisa en cada una de ellas en los 67 caracteres 
+    de extensión con los que cuenta-->
+    <meta property="og:title" content="Curriculum Vitae" />
+
+    <!--La etiqueta type permite explicarle a los buscadores de qué trata el contenido en concreto, 
+    por ejemplo, si es parte de un blog, un video o un artículo-->
+    <meta property="og:type" content="blog" />
+
+    <!-- La etiqueta url muestra, la url donde va estar subido la pagina-->
+    <meta property="og:url" content="https://github.com/Padavi3000/curriculum.git" />
+
+    <!--La etiqueta description indicará con mayor extensión sobre lo que existe dentro del sitio. 
+    Para que pueda ser identificada por los buscadores no debe exceder los 155 caracteres y, 
+    preferiblemente, debe contener un CTA que motive al usuario a ejecutar una acción-->
+    <meta property="og:description" content="Esta pagina muestra un Curriculum Vitae" />
+</head>
+
+<body>
+
+    <header id="Encabezado">
+        <img src="" id='foto' alt="Foto" width="140" height="140">
+        <a href="#Personal"><button id="botonInformacion" class="button button1"
+                onclick="cargar()"><b>Informacion</b></a></button></li>
+        <a href="#Experiencia"><button id="botonExperiencia" class="button button2"><b>Experiencia</b></a></button></li>
+        <a href="#Habilidades"><button id="botonHabilidades" class="button button3"><b>Habilidades</b></a></button></li>
+    </header>
+
+    <section class="ancla" id="Personal">
+        <h1 id="tituloSeccion1"><br><br><br><br><br>Informacion Personal</h1>
+        <h3 class="datos1" id='nombre'>Nombre:</h3>
+        <h3 class="datos2" id="apellido">Apellido:</h3>
+        <h3 class="datos1" id="tipoDocu">Tipo Documento:</h3>
+        <h3 class="datos2" id="numDocumento">Numero Documento:</h3>
+        <h3 class="datos1" id="sexo">Sexo:</h3>
+        <h3 class="datos2" id="fechaNacimiento">Fecha Nacimiento:</h3>
+        <h3 class="datos1" id="celular">Celular:</h3>
+        <h3 class="datos2" id="eMail">eMail:</h3>
+        <h3 class="datos1" id="pais">Pais:</h3>
+        <h3 class="datos2" id="estado">Estado:</h3>
+        <h3 class="datos1" id="ciudad">Ciudad:</h3>
+        <h3 class="datos2" id="codigoPostal">Codigo Postal:</h3>
+        <h3 class="datos1" id="calle">Calle:</h3>
+        <h3 class="datos2" id="numCalle">Numero:</h3>
+        <h3 class="datos1" id="numPiso">Piso: 10</h3>
+        <h3 class="datos2" id="departamento">Departamento: A</h3>
+    </section>
+
+    <section class="ancla" id="Experiencia">
+        <h1 id="tituloSeccion2"><br><br><br><br><br>Experiencia Laboral</h1>
+        <ol id="contenidoExperiencia">
+            <li class="datoExper1">Primer Trabajo</li>
+            <ul class="datoExper1">
+                <li>Empresa: Garcia SA</li>
+                <li>Puesto: Contador</li>
+                <li>Experiencia: Training</li>
+                <li>Area del puesto: Contabilidad</li>
+                <li>Fecha de inicio : Febrero 2010</li>
+                <li>Fecha de Finalizacion: Marzo 2013<br></li>
+            </ul>
+            <li class="datoExper2">Segundo Trabajo</li>
+            <ul class="datoExper2">
+                <li>Empresa: Super Estructuras</li>
+                <li>Puesto: Analista</li>
+                <li>Experiencia: Junior</li>
+                <li>Area del puesto: Logistica</li>
+                <li>Fecha de inicio : Marzo 2013</li>
+                <li>Fecha de Finalizacion: Junio 2015<br></li>
+            </ul>
+            <li class="datoExper1">Tercer Trabajo</li>
+            <ul class="datoExper1">
+                <li>Empresa: Aerolineas Argentinas</li>
+                <li>Puesto: Contador</li>
+                <li>Experiencia: Semi-Senior</li>
+                <li>Area del puesto: Administracion</li>
+                <li>Fecha de inicio : Junio 2015</li>
+                <li>Fecha de Finalizacion: Diciembre 2019<br></li>
+            </ul>
+            <li class="datoExper2">Cuarto Trabajo</li>
+            <ul class="datoExper2">
+                <li>Empresa: Techin</li>
+                <li>Puesto: Gerente</li>
+                <li>Experiencia: Senior</li>
+                <li>Area del puesto: Finanzas</li>
+                <li>Fecha de inicio : Diciembre 2019</li>
+                <li>Fecha de Finalizacion: Marzo 2023<br></li>
+            </ul>
+        </ol>
+    </section>
+
+    <section class="ancla" id="Habilidades">
+        <h1 id="tituloSeccion3"><br><br><br><br><br>Habilidades</h1>
+        <ul id="contenidoHabilidades">
+            <li class="datoHabil1">Habilidades de negociación</li>
+            <li class="datoHabil2">Excelente atención al cliente</li>
+            <li class="datoHabil1">Cumplimiento de metas mensuales</li>
+            <li class="datoHabil2">Gran capacidad de adaptación</li>
+            <li class="datoHabil1">Facilidad de palabra</li>
+            <li class="datoHabil2">Comunicación persuasiva</li>
+            <li class="datoHabil1">Nociones de marketing</li>
+            <li class="datoHabil2">Trabajo en equipos multidisciplinarios</li>
+            <li class="datoHabil1">Competencias avanzadas en CAD</li>
+            <li class="datoHabil2">Gestión de proyectos</li>
+            <li class="datoHabil1">Amplios conocimientos de Jenkins</li>
+            <li class="datoHabil2">Programación en Phyton</li>
+            <li class="datoHabil1">Manejo y administracion de bases de datos</li>
+            <li class="datoHabil2">Proactividad</li>
+            <li class="datoHabil1">Investigación y desarrollo</li>
+            <li class="datoHabil2">Creatividad y originalidad</li>
+            <li class="datoHabil1">Profesionalidad</li>
+            <li class="datoHabil2">Visión de negocio</li>
+            <li class="datoHabil1">Visión empresarial</li>
+            <li class="datoHabil2">Evaluación del rendimiento</li>
+            <li class="datoHabil1">Excelentes habilidades interpersonales</li>
+            <li class="datoHabil2">Dirección de personal</li>
+            <li class="datoHabil1">Contabilidad general</li>
+            <li class="datoHabil2">Fijación y concreción de metas</li>
+            <li class="datoHabil1">Administración de negocios</li>
+            <li class="datoHabil2">Gestión de conflictos</li>
+            <li class="datoHabil1">Empatía</li>
+            <li class="datoHabil2">Gestión de proyectos</li>
+            <li class="datoHabil1">Excelentes dotes comunicativas</li>
+        </ul>
+        <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
+    </section>
+
+    <script src="funciones.js"></script>
+
+</body>
+
+</html>

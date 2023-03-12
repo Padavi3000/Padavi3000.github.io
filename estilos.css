@@ -1,0 +1,130 @@
+/*Defino un encabezado fijo*/
+/*Me hubiera gustado hacer una barra lateral fija*/
+#Encabezado {
+  background: #e6a01e;
+  position: sticky;
+  top: 0;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*No fue necesario hacerle cambios a la foto*/
+#foto {
+  border: 0;
+  padding: 5px;
+  margin: 0px;
+  background-color: #0d013a;
+}
+
+/*Doy un color diferente a cada titulo de seccion*/
+#tituloSeccion1 {
+  color: #005203;
+  text-decoration: underline;
+}
+
+#tituloSeccion2 {
+  color: #02007a;
+  text-decoration: underline;
+}
+
+#tituloSeccion3 {
+  color: #680000;
+  text-decoration: underline;
+}
+
+/*Defino los botones y hago que cambien de color*/
+.button {
+  border: none;
+  color: rgb(190, 190, 190);
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #fa5959;
+}
+
+.button3:hover {
+  background-color: #fa5959;
+  color: white;
+}
+
+/*Intercalo el color de cada linea de cada seccion de la pagina*/
+.datos1 {
+  color: #010035;
+}
+
+.datos2 {
+  color: #380000;
+}
+
+.datoExper1 {
+  color: #380000;
+}
+
+.datoExper2 {
+  color: #002701;
+}
+
+.datoHabil1 {
+  color: #002701;
+}
+
+.datoHabil2 {
+  color: #010035;
+}
+
+/*Letra usada en toda la pagina*/
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
+/*Color de fondo que no incluira al encabezado*/
+body {
+  background-color: rgb(190, 190, 190);
+}
+
+/*Disminuyo el tamaño de los botones si la pantalla es un poco mas angosta*/
+@media screen and (max-width: 562px) {
+  .button {
+    font-size: 10px;
+  }
+}
+
+/*Agrando un poco los botones si se puede*/
+@media screen and (min-width: 563px) {
+  .button {
+    font-size: 17px;
+  }
+}
