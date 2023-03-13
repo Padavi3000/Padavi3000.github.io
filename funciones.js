@@ -1,5 +1,5 @@
 // Voy a definir las variables donde se va a escribir 
-// los campos individuales de RANDOM USER GENERATOR
+// los datos obtenidos de RANDOM USER GENERATOR
 const foto = document.getElementById('foto');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById("apellido");
