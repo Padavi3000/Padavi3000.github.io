@@ -18,6 +18,17 @@ const numCalle = document.getElementById("numCalle");
 const numPiso = document.getElementById("numPiso");
 const departamento = document.getElementById("departamento");
 
+var miImagen = document.getElementById("Encabezado");
+var miTextoEmergente = document.getElementById("mi-texto-emergente");
+
+miImagen.onmouseover = function () {
+        miTextoEmergente.style.display = "block";
+};
+
+miImagen.onmouseout = function () {
+        miTextoEmergente.style.display = "none";
+};
+
 // Esta funcion va a hacer uso de la API RANDOM USER GENERATOR
 const ObtenerUsuario = async () => {
         const haceClick = document.getElementById("botonInformacion");

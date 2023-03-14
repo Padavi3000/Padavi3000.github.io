@@ -9,6 +9,18 @@
   margin: 0px;
 }
 
+#mi-contenedor {
+  position: relative;
+}
+
+#mi-texto-emergente {
+  display: none;
+  position:absolute;
+  left: 160px;
+  top:  10px;  
+  color: #fff;
+}
+
 /*No fue necesario hacerle cambios a la foto*/
 #foto {
   border: 0;
@@ -106,8 +118,13 @@
 }
 
 /*Letra usada en toda la pagina*/
-* {
+* {  
   font-family: 'Roboto Slab', serif;
+}
+
+ol, ul, li {
+  font-size: 20px;
+  font-family: 'Noto Serif Lao', serif;
 }
 
 /*Color de fondo que no incluira al encabezado*/
